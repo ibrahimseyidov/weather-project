@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/style/reset.css">
+    <link rel="stylesheet" href="./assets/style/style.css">
+    <title>Weather App</title>
+</head>
+
+<body class="bg-linear">
+
+    <div class="left-container">
+        <div class="header">
+            <img src="" style="width: 150px" id="headImg">
+            <div class="cf-contain">
+                <div class="c-contain">
+                    <span class="c-btn">C</span>
+                </div>
+                <div class="f-contain">
+                    <span class="f-btn">F</span>
+                </div>
+            </div>
+        </div>
+
+        <div>
+            <div class="left-top-container">
+                <span class="degree" style="vertical-align: sub;"><span class="degreesub"
+                        style="vertical-align: super;">°C</span></span>
+                <p class="date" id="date"></p>
+                <p><span class="month">Monday </span> <span class="hour"></span></p>
+            </div>
+
+            <div class="left-middle-container">
+                <div class="location">
+                    <img src="./assets/icons/vector.svg" style="padding-right: 15px;">
+                    <p class="weather-info">Wind <span id="wind"></span>km/h</p>
+                </div>
+                <div class="location">
+                    <img src="./assets/icons/humid.svg" style="padding-right: 15px; padding-left: 21px;">
+                    <p class="weather-info">Hum <span id="humidity"></span>%</p>
+                </div>
+                <div class="location-1">
+                    <img src="./assets/icons/rainy.svg" style="padding-right: 15px; padding-left: 21px;">
+                    <p class="weather-info">Rain <span id="rain"></span>%</p>
+                </div>
+
+            </div>
+
+            <div class="main-container">
+                <div class="weather-container">
+                    <div class="bg-weather" id="mon">
+                        <span id="monTemp"></span>
+                        <img src="./assets/icons/cloud.svg"
+                            style="width: 115px; filter: drop-shadow(10px 2px 30px rgba(114, 186, 248, 0.596));" id="monday">
+                        <span>Mon</span>
+                    </div>
+                    <div class="bg-weather" id="tue">
+                        <span id="tuesTemp"></span>
+                        <img src="./assets/icons/cloud.svg" style="width: 115px; filter: drop-shadow(10px 2px 30px rgba(114, 186, 248, 0.596));" id="tuesday">
+                        <span>Tue</span>
+                    </div>
+                    <div class="bg-weather" id="wed">
+                        <span  id="wedTemp"></span>
+                        <img src="./assets/icons/cloud.svg" style="width: 115px; filter: drop-shadow(10px 2px 30px rgba(114, 186, 248, 0.596));" id="wednesday">
+                        <span>Wed</span>
+                    </div>
+                    <div class="bg-weather" id="thur">
+                        <span  id="thurTemp"></span>
+                        <img src="./assets/icons/cloud.svg" style="width: 115px; filter: drop-shadow(10px 2px 30px rgba(114, 186, 248, 0.596));" id="thursday">
+                        <span>Thur</span>
+                    </div>
+                    <div class="bg-weather" id="fri">
+                        <span  id="friTemp"></span>
+                        <img src="./assets/icons/cloud.svg" style="width: 115px; filter: drop-shadow(10px 2px 30px rgba(114, 186, 248, 0.596));" id="friday">
+                        <span>Fri</span>
+                    </div>
+                    <div class="bg-weather" id="sat">
+                        <span id="satTemp"></span>
+                        <img src="./assets/icons/cloud.svg" style="width: 115px; filter: drop-shadow(10px 2px 30px rgba(114, 186, 248, 0.596));" id="saturday">
+                        <span>Sat</span>
+                    </div>
+                    <div class="bg-weather" id="sun">
+                        <span  id="sunTemp"></span>
+                        <img src="./assets/icons/cloud.svg" style="width: 115px; filter: drop-shadow(10px 2px 30px rgba(114, 186, 248, 0.596));" id="sunday">
+                        <span>Sun</span>
+                    </div>
+                 
+                </div>
+                <div>
+                    <img src="./assets/icons/more.svg" id="moreBtn">
+                </div>
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="right-container">
+        <div>
+            <div class="section-1">
+                <div style="display: flex; align-items:center">
+                    <img src="./assets/icons/location.svg" style="padding-right: 23px;">
+                    <p class="section1-text" id="countryArea">Jhansi, India</p>
+                </div>
+                <div>
+                    <img src="./assets/icons/addbtn.svg" id="addBtn">
+                    <img src="./assets/icons/removebtn.svg" id="removeBtn">
+                </div>
+            </div>
+            <div class="search-area" id="searchArea">
+                <input type="text" class="input" id="searchInput">
+                <button class="search-btn" id="searchBtn">Search</button>
+                <div id="error">Country Not Found</div>
+            </div>
+
+        </div>
+
+
+        <div class="sunrise-section">
+            <div>
+                <p class="sunrise">Sunrise</p>
+                <div class="sunrise-container">
+                    <img src="./assets/icons/sunriseline.svg" style="margin-bottom: 50px; margin-top: 40px;">
+                    <p style="padding-bottom: px;"><span style="font-size: 28px;" id="sunrise">7:30</span> <span
+                            style="font-size:20px;">AM</span></p>
+                    <img src="./assets/icons/sunrise.svg">
+                </div>
+            </div>
+            <div>
+                <p class="sunrise">Sunset</p>
+                <div class="sunrise-container">
+                    <img src="./assets/icons/sunriseline.svg" style="margin-bottom: 50px; margin-top: 40px;">
+                    <p style="padding-bottom: px;"><span style="font-size: 28px;" id="sunset">5:45</span> <span
+                            style="font-size:20px;">PM</span></p>
+                    <img src="./assets/icons/sunset.svg">
+                </div>
+            </div>
+        </div>
+
+        <div>
+
+            <div class="info-section">
+                <img src="./assets/icons/line.svg" style="padding-right: 16px;">
+                <img src="./assets/icons/infobtn.svg">
+            </div>
+
+            <div>
+                <div class="top-info">
+                    <div>
+                        <p class="humid" style="padding-bottom: 10px;">Humidity</p>
+                        <span class="humid" id="humid1" style="font-weight:400;">38%</span>
+                    </div>
+                    <div>
+                        <p class="humid" style="padding-bottom: 10px;">Chance of rain</p>
+                        <span class="humid" id="rainy" style="font-weight:400;">2%</span>
+                    </div>
+                </div>
+                <div class="bottom-info">
+                    <div>
+                        <p class="humid" style="padding-bottom: 11px;">Air Quality</p>
+                        <div class="ellipse">
+                            <img src="./assets/icons/ellipse.svg" class="ellip">
+                            <img src="./assets/icons/circle.svg" class="circle">
+                        </div>
+                        <div class="score-moderate">
+                            <p class="score"><span id="airScore"></span>/10</p>
+                            <span class="moderate">Moderate</span>
+                        </div>
+
+                    </div>
+
+                    <div>
+                        <p class="humid" style="padding-right: 25px; padding-bottom:10px">Wind speed</p>
+                        <p class="humid" style="font-weight:400;"><span id="wind1">3.8</span> km/h <img
+                                src="./assets/icons/wind.svg"></p>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/js/script.js"></script>
+
+</body>
+
+</html>
